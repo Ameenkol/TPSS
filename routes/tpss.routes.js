@@ -6,6 +6,10 @@ const arrayGroupBy = require("../util/arrayGroupBy");
 
 const paymentRoute = express.Router();
 
+paymentRoute.get('/', (req, res) => { 
+    return res.status(200).json({message: "Welcome to TPSS"})
+})
+
 paymentRoute.post("/split-payments/compute", [], async (req, res) => {
 
     const { ID,
